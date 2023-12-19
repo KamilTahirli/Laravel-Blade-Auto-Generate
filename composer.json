@@ -1,0 +1,28 @@
+{
+  "name": "kamil-tahirli/laravel-blade-auto-generate",
+  "description": "Laravel framework - u üçün blade fayllarının avtomatik yaradılması",
+  "type": "library",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Kamil Tahirli",
+      "email": "tahirli587@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Tahirli\\BladeTemplate\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Tahirli\\BladeTemplate\\TahirliServiceProvider"
+      ]
+    }
+  }
+}
