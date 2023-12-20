@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class CreateBladeFile extends Command
+class BladeFileCreate extends Command
 {
     /**
      * The name and signature of the console command.
@@ -29,10 +29,11 @@ class CreateBladeFile extends Command
         $path = 'resources/views/';
         $bladeName = strtolower($this->argument('bladeName'));
         $extension = ".blade.php";
-
-        $newBlade = fopen($path . $bladeName . $extension, 'w');
+        $bladeFullName = $path . $bladeName . $extension;
+        $newBlade = fopen($bladeFullName, 'w');
 
         if ($newBlade) {
+            $this->info("INFO  Blade file [resources/views/{$bladeFullName}] created successfully.");
             return Command::SUCCESS;
         }
         return Command::FAILURE;
