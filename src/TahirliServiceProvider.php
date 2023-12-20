@@ -1,6 +1,6 @@
 <?php
 
-namespace Tahirli\Kapitalbank;
+namespace Tahirli\BladeTemplate;
 
 use Illuminate\Support\ServiceProvider;
 
